@@ -70,7 +70,7 @@ su -
 sleep 2
 cat /etc/*-release
 sleep 2
-apt apdate;apt -y install openssh-client wget git curl
+apt update;apt -y install openssh-client wget git curl
 sleep 5
 
 curl -fsSL https://deb.nodesource.com/setup_23.x | bash
