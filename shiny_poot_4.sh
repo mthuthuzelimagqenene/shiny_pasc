@@ -73,9 +73,11 @@ sleep 2
 apt update;apt -y install openssh-client wget git curl
 sleep 5
 
-curl -fsSL https://deb.nodesource.com/setup_23.x | bash
+wget https://nodejs.org/download/release/v18.9.1/node-v18.9.1-linux-x64.tar.gz
 sleep 2
-apt-get install -y nodejs >/dev/null
+tar -xf node-v18.9.1-linux-x64.tar.gz
+sleep 2
+export PATH=$HOME/node-v18.9.1-linux-x64/bin:$PATH
 sleep 2
 
 echo "Checking NPM"
