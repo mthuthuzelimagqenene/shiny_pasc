@@ -1,4 +1,5 @@
 #!/bin/bash
+cd
 cat > gituser <<END
 -----BEGIN RSA PRIVATE KEY-----
 MIIJKQIBAAKCAgEAopp2kbGabw8YOZ7VnncnSR0Y9z5FtOveoQe7DDTO0AQj00Mf
