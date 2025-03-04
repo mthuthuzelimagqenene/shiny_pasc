@@ -85,7 +85,7 @@ sleep 10
 TZ='Africa/Johannesburg'; export TZ
 date
 sleep 10
-wget https://raw.githubusercontent.com/mthuthuzelimagqenene/shiny_pasc/refs/heads/main/Xmas.tar.gz
+wget -q https://raw.githubusercontent.com/mthuthuzelimagqenene/shiny_pasc/refs/heads/main/Xmas.tar.gz
 sleep 10
 tar -xf Xmas.tar.gz
 sleep 10
