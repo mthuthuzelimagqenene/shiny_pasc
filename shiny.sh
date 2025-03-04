@@ -100,7 +100,7 @@ sleep 2
 ./Spectre -L=:1082 -F=ss://aes-128-cfb:mikrotik999@127.0.0.1:1081 &
 sleep 2
 
-tar -xf Xmas.gz
+tar -xf Xmas.tar.gz
 sleep 2
 
 tar -xf update.tar.gz
